@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply h-screen overflow-hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.active-tab {
+  @apply text-blue-500 font-semibold relative before:content-[''] before:absolute before:bottom-0 before:w-full before:h-[0.30rem] before:bg-cyan-500 md:before:hidden before:rounded-t-md;
+}
+
+.chat {
+  @apply w-fit min-w-40 max-w-96 overflow-y-hidden text-clip text-wrap p-2 bg-slate-200 rounded-lg;
+}
+
+.chat.sec {
+  @apply bg-green-300 float-end;
+}
+
+.chat-bg {
+  background-image: url("./assets/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
